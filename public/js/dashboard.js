@@ -1,4 +1,4 @@
-const newHandler = async (event) => {
+const newBlogHandler = async (event) => {
   event.preventDefault();
   const title = document.querySelector('#blog-title').value.trim();
   const content = document.querySelector('#blog-content').value.trim();
@@ -15,7 +15,7 @@ const newHandler = async (event) => {
     }
   }
 };
-const updateHandler = async (event) => {
+const updateBlogHandler = async (event) => {
   event.preventDefault();
   const id = event.target.getAttribute('data-id');
   const title = document.querySelector('#blog-title').value.trim();
@@ -23,7 +23,7 @@ const updateHandler = async (event) => {
   if (id && title && content) {
     const response = await fetch(`/api/blog/${id}`, {
       method: 'PUT',
-      body.JSON.stringify({ id, title, content }),
+      body: JSON.stringify({ id, title, content }),
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
@@ -33,7 +33,7 @@ const updateHandler = async (event) => {
     }
   }
 };
-const deleteHandler = async (event) => {
+const deleteBlogHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
     const response = await fetch(`/api/blog/${id}`, {

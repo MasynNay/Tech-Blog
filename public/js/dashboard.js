@@ -29,7 +29,7 @@ const updateBlogHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to update this blog');
+      alert('Failed To Update Blog. Please Try Again');
     }
   }
 };
@@ -42,7 +42,19 @@ const deleteBlogHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to delete blog');
+      alert('Failed To Delete This Blog. Please Try Again');
     }
   }
 };
+
+document
+  .querySelector('.create-blog-form')
+  .addEventListener('submit', newBlogHandler);
+
+document
+  .querySelector('.update-blog-form')
+  .addEventListener('submit', updateBlogHandler);
+
+document
+  .querySelector('.delete-blog-form')
+  .addEventListener('click', deleteBlogHandler);

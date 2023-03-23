@@ -1,14 +1,14 @@
-{{#each blog as |blog|}}
-<section class="container-fluid">
-  <div class="card mt-5" style="width: 85%;">
-    <div class="card-body">
-      <h5 class="card-title fw-bold">
-        <a href="/{{blog.id}}">{{blog.title}}</a>
-      </h5>
-      <h6 class="card-subtitle mb-2 text-muted">Posted By: 
-        <span class="fw-bold">{{blog.user.username}}</span> On: {{format_date blog.created}}
-      <p class="card-text">{{blog.content}}</p>
+{{#each blogs as |blog|}}
+  <section class="container-fluid">
+    <div class="card mt-5" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">
+          <a href="/{{blog.id}}">{{blog.title}}</a>
+          </h5>
+        <h6 class="card-subtitle mb-2 text-muted fw-semibold">Created on:
+          <span class="fw-bold">{{format_date blog.dateCreated}}</span></h6>
+        <p class="card-text">{{blog.content}}</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 {{/each}}

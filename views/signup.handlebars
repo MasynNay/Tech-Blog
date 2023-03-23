@@ -1,14 +1,24 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
-</div>
+<section class="container-fluid">
+  <div class="card mt-5">
+    <div class="card-header">
+      Sign Up
+    </div>
+    <div class="card-body">
+      <form class="signup-form">
+        <div class="mb-3">
+          <label for="signup-username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="signup-username" />
+        </div>
+        <div class="mb-4">
+          <label for="signup-password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="signup-password" />
+        </div>
+        <a href="/login">You Can Log In Here If You Already Have An Account</a>
+        <br>
+        <button type="submit" class="btn btn-primary bg-success fw-semibold signup-submit-btn" style="color: black; border: 0;">Create Account</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="/js/signup.js"></script>

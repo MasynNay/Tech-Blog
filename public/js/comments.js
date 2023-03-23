@@ -13,7 +13,11 @@ const newCommentHandler = async (event) => {
     if (response.ok) {
       document.location.reload();
     } else {
-      alert('Cannot create comment');
+      alert('Cannot Create Comment. Please Try Again');
     }
   }
 };
+
+document
+  .querySelector('.new-comment-form')
+  .addEventListener('submit', newCommentHandler);

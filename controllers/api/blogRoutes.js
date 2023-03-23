@@ -14,7 +14,7 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/blog/:id', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.destroy({
       where: {
@@ -32,12 +32,12 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/blog/:id', withAuth, async (req, res) => {
   try {
     const blogData = await Blog.update(
       {
         ...req.body,
-        user_id: req.session.user_id,
+        userId: req.session.userId,
       },
       {
         where: {

@@ -1,10 +1,37 @@
 <section class="container-fluid row">
-  {{each blogs as |blog|}}
-  <div class="card mt-5" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">{{blog.title}}</h5>
-      <p class="card-text">{{blog.content}}</p>
+  <h3 class="mt-5">Hello, {{ username }}!</h3>
+
+  <div class="container-fluid">
+    <div class="card mt-5">
+      <div class="card-body">
+        <h4 class="card-title">Create Blog</h4>
+        <form class="form new-blog-form">
+          <div class="form-group">
+            <input class="form-input" type="text" id="blog-title" name="blog-title" placeholder="Blog Title" />
+          </div>
+
+          <div class="form-group">
+            <textarea class="form-input" id="blog-desc" name="blog-desc" placeholder="Blog Content"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create</button>
+          </div>
+        </form>
+      </div>
+
+      {{#each blogs as |blog|}}
+      <div class="card m-2 mt-5" style="width: 16rem;">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="/dashboard/{{blog.id}}/edit">{{blog.title}}</a>
+          </h5>
+          <h6 class="card-subtitle mb-2">Created On: {{format_date blog.dateCreated}}</h6>
+        </div>
+        <button class="btn btn-primary mt-4" data-id="{{blog.id}}">Delete</button>
+      </div>
     </div>
+    {{/each}}
   </div>
-  {{/each}}
+
+
 </section>

@@ -1,30 +1,39 @@
-<section class="container-fluid">
-  <div class="card mt-5">
-    <div class="header">
-      Posted By:
-      <span class="fw-bold">{{blog.user.username}}</span>
-      On:
-      {{format_date blog.created}}
-    </div>
-    <div class="card-body">
-      <h2 class="card-title">{{blog.title}}</h2>
-      <p class="card-text">{{blog.content}}</p>
-    </div>
-  </div>
+<div class="text">
+	<div class="container blogBoxCont">
+		<div class="row headerRow">
+			<div class="col-8">
+				<h2 class="blogTitle text-uppercase">{{title}}</h2>
+			</div>
+			<div class="col-4">
+				<p class="blogCreate text-right">Created by {{user.username}} on {{format_date dateCreated}}</p>
+			</div>
+		</div>
+		<p class="text-center blogDescTwo">{{blog.content}}</p>
+	</div>
+</div>
+<h2 class="text-center">Comments</h2>
+{{#each comments as |comment|}}
+<div class="commentCont">
+	<p class="text-center commentText">{{comment.comment}}</p>
+	<p class="text-center commentOwner">Created by {{comment.user.username}} on {{format_date dateCreated}}</p>
+</div>
+{{/each}}
 
-  {{#if logged_in}}
-  <div class="card mt-5">
-    <div class="card-body">
-      <form class="form new-comment-form">
-        <div class="form-group">
-          <label for="comment-content">Leave A Comment:</label>
-          <textarea class="form-input" id="comment-content" name="comment-content"></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary">Post</button>
-        </div>
-      </form>
-    </div>
-    {{/if}}
-    
-</section>
+{{#if logged_in}}
+<div class="card mt-4">
+	<div class="card-body">
+		<h5 class="card-title">Leave A Comment</h5>
+		<form class="create-comment-form">
+			<div class="mb-3">
+				<textarea class="form-control" id="comment-form" rows="3"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">Post</button>
+		</form>
+	</div>
+</div>
+{{/if}}
+
+
+{{#if logged_in}}
+<script src="/js/comment.js"></script>
+{{/if}}

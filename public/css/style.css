@@ -4,6 +4,35 @@ body {
   background-image: url("../images/background.png");
   background-size: 100%;
 }
+h2 {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color: #f2f2f2;
+}
+h3 {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  color: #f2f2f2;
+}
+.activeBlogs {
+  background-color: #f2f2f2;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 65%;
+}
+
+.activeBlogLink {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  color: #2b3f57;
+}
 
 .navTitle {
   color: #2b3f57;
@@ -55,6 +84,24 @@ body {
   font-family: 'Kaushan Script', cursive;
   font-family: 'Lobster', cursive;
   color: #f2f2f2;
+}
+.blogList {
+  background-color: #4289a3;
+  border: 4px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+}
+.blogDescriptionForm {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 80%;
+  margin-top: 10px;
+  
 }
 
 .blogCreate {
@@ -131,8 +178,40 @@ body {
   background-color: #f2f2f2;
 }
 
+.createNewBlog {
+  background-color: #4289a3;
+  border: 4px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .commentCont {
   border-style: solid;
+}
+
+.deleteBlogBtn {
+  background-color: #2b3f57;
+  color: #f2f2f2;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  border: 2px;
+  border-style: solid;
+  border-color: #f2f2f2;
+  margin-top: 10px;
+}
+
+.dashboardHeader {
+  background-color: #4289a3;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  text-align: center;
+  border: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .headerRow {
@@ -140,7 +219,7 @@ body {
 }
 
 a:link {
-  color: #f2f2f2;
+  color: #2b3f57;
 }
 
 a:hover {
@@ -148,15 +227,45 @@ a:hover {
 }
 
 .login {
-  margin-left: 25px;
+  padding-bottom: 20px;
 }
 
 .signup {
-  margin-left: 25px;
+  padding-bottom: 20px;
 }
 
 .form-group {
   margin-top: 10px;
+}
+.loginBox {
+  margin-top: 80px;
+  background-color: #4289a3;
+  border: 4px;
+  border-style: solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.loginTextBox {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  color: #2b3f57;
+  border-radius: 5px;
+}
+
+.loginBtn {
+  background-color: #2b3f57;
+  color: #f2f2f2;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  border: 2px;
+  border-style: solid;
+  border-color: #f2f2f2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 20%;
 }
 
 .logoutLink {
@@ -169,4 +278,19 @@ a:hover {
   color: #2b3f57;
   font-family: 'Kaushan Script', cursive;
   font-family: 'Lobster', cursive;
+}
+
+.signupLink {
+  background-color: #2b3f57;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  border: 2px;
+  border-style: solid;
+  border-color: #f2f2f2;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-bottom: 10px;
 }

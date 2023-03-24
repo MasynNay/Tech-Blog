@@ -1,38 +1,60 @@
 const router = require("express").Router();
-const { User, Comment } = require("../../models");
+const { Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-router.get("/", async (req, res) => {
-  try {
-    const commentData = await Comment.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["username"],
-        },
-      ],
+// Get All Comments
+router.get("/", (req, res) => {
+  Comment.findAll({})
+    .then((commentData) => res.json(commentData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
     });
+});
 
-    const comments = commentData.map((comment) => comment.get({ plain: true }));
+// Get Comment By ID
+router.get("/:id", (req, res) => {
+  Comment.findAll({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((commentData) => res.json(commentData))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
-    res.render("blog", { comments });
+// Create New Comment
+router.post("/", async (req, res) => {
+  try {
+    const newComment = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+    res.json(newComment);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.post("/", withAuth, async (req, res) => {
+// Delete Comment
+router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const addComment = await Comment.create({
-      comment: req.body.comment,
-      userId: req.session.userId,
-      blogId: req.body.blogId,
+    const commentData = await Comment.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
     });
-
-    res.status(200).json(addComment);
+    if (!commentData) {
+      res.status(404).json({ message: "404 Blog ID not found" });
+      return;
+    }
+    res.status(200).json(commentData);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 module.exports = router;

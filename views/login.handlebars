@@ -1,23 +1,21 @@
-<section class="container-fluid">
-  <div class="card mt-5">
-    <div class="card-header">
-      <h2>Login</h2>
-  </div>
-  <div class="card-body">
-    <form class="login-form">
-      <div class="mb-4">
-        <label for="login-password" class="form-label">Username</label>
-        <input type="text" class="form-control" id="login-username">
+<div class="row">
+  <div class="col justify-content-center">
+    <h2 class="login">Login</h2>
+    <form class="form loginSubmit">
+      <div class="form-group">
+        <input class="form-input" type="text" placeholder="Username" id="username-login" />
       </div>
-      <div class="mb-4">
-        <label for="login-password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="login-password">
+      <div class="form-group">
+        <input class="form-input" type="password" placeholder="Password" id="password-login" />
       </div>
-      <a href="/signup">If You Do Not Already Have An Account, You Can Create One Here!</a>
-      <br>
-      <button type="submit" class="btn btn-primary mt-3">Login</button>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
+      <div>
+        <a href="/signUp">Sign Up Instead</a>
+      </div>
     </form>
   </div>
-</section>
-<script src="/js/login.js"></script>
+</div>
 
+<script src="./js/login.js"></script>

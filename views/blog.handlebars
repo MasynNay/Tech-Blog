@@ -1,39 +1,37 @@
 <div class="text">
 	<div class="container blogBoxCont">
 		<div class="row headerRow">
-			<div class="col-8">
-				<h2 class="blogTitle text-uppercase">{{title}}</h2>
+			<div class="col-12">
+				<h2 class="blogTitle">{{title}}</h2>
 			</div>
-			<div class="col-4">
-				<p class="blogCreate text-right">Created by {{user.username}} on {{format_date dateCreated}}</p>
+			<div class="col-12">
+				<p class="blogCreate text-center">Created By: {{user.username}} On: {{format_date date_created}}</p>
 			</div>
 		</div>
-		<p class="text-center blogDescTwo">{{blog.content}}</p>
+		<p class="text-center blogDescTwo">{{description}}</p>
 	</div>
 </div>
-<h2 class="text-center">Comments</h2>
+<div class="commentBox col-12">
+<h2 class="blogTitle text-center text-underline">Comments:</h2>
 {{#each comments as |comment|}}
 <div class="commentCont">
-	<p class="text-center commentText">{{comment.comment}}</p>
-	<p class="text-center commentOwner">Created by {{comment.user.username}} on {{format_date dateCreated}}</p>
+	<p class="text-center commentText">{{comment.commentDescription}}</p>
+	<p class="text-center commentOwner">Commented By: {{comment.user.username}} On: {{format_date date_created}}</p>
 </div>
 {{/each}}
-
-{{#if logged_in}}
-<div class="card mt-4">
-	<div class="card-body">
-		<h5 class="card-title">Leave A Comment</h5>
-		<form class="create-comment-form">
-			<div class="mb-3">
-				<textarea class="form-control" id="comment-form" rows="3"></textarea>
-			</div>
-			<button type="submit" class="btn btn-primary">Post</button>
-		</form>
-	</div>
 </div>
-{{/if}}
-
-
 {{#if logged_in}}
-<script src="/js/comment.js"></script>
+<form class="newCommentForm formCont d-flex flex-wrap justify-content-center" data-blogid={{id}}>
+	<div class=" commentTextBox textAreaCont p-2">
+		<textarea id='commentDescription' name="comment-body" placeholder="Enter Your Comment Here..." cols="80"
+			rows="2"></textarea>
+	</div>
+	<div class="btnComment p-2">
+		<button class="commentButton btn btn-success" type="submit">Add Comment</button>
+	</div>
+</form>
 {{/if}}
+
+
+
+<script src="/js/comments.js"></script>

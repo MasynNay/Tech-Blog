@@ -1,24 +1,22 @@
-<section class="container-fluid">
-  <div class="card mt-5">
-    <div class="card-header">
-      Sign Up
-    </div>
-    <div class="card-body">
-      <form class="signup-form">
-        <div class="mb-3">
-          <label for="signup-username" class="form-label">Username</label>
-          <input type="text" class="form-control" id="signup-username" />
-        </div>
-        <div class="mb-4">
-          <label for="signup-password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="signup-password" />
-        </div>
-        <a href="/login">You Can Log In Here If You Already Have An Account</a>
-        <br>
-        <button type="submit" class="btn btn-primary bg-success fw-semibold signup-submit-btn" style="color: black; border: 0;">Create Account</button>
-      </form>
-    </div>
-  </div>
-</section>
+<div>
+  <h2 class="signup">Sign Up</h2>
 
-<script src="/js/signup.js"></script>
+  <form class="form signupSubmit">
+    <div class="form-group">
+      <input class="form-input" type="text" placeholder="Username" id="signupUsername" />
+    </div>
+
+    <div class="form-group">
+      <input class="form-input" type="password" placeholder="Password" id="signupPassword" />
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Signup</button>
+    </div>
+  </form>
+  <div>
+    <a href="/login">Login Instead</a>
+  </div>
+</div>
+
+<script src="./js/signUp.js"></script>

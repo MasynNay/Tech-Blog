@@ -1,14 +1,25 @@
 {{#each blogs as |blog|}}
-  <section class="container-fluid">
-    <div class="card mt-5" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title fw-bold">
-          <a href="/{{blog.id}}">{{blog.title}}</a>
-          </h5>
-        <h6 class="card-subtitle mb-2 text-muted fw-semibold">Created on:
-          <span class="fw-bold">{{format_date blog.dateCreated}}</span></h6>
-        <p class="card-text">{{blog.content}}</p>
+  <div class="row">
+    <div class="container blogBox">
+			<div class="row text-center headerRow">
+      <div class="col-12">
+        <h2>
+          <a class="blogTitle" href="/blog/{{blog.id}}">{{blog.title}}</a>
+        </h2>
       </div>
+      <div class="col-12">
+        <p class="blogCreate text-center">Created By:
+          {{blog.user.username}}
+          On:
+          {{format_date blog.date_created}}
+        </p>
+      </div>
+			</div>
+    <div class="blogDesc">
+      <p class="text-center blogDescMain">
+        {{blog.description}}
+      </p>
     </div>
-  </section>
+    </div>
+  </div>
 {{/each}}

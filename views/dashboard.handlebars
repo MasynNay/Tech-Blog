@@ -1,37 +1,43 @@
-<section class="container-fluid row">
-  <h3 class="mt-5">Hello, {{ username }}!</h3>
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome To Your Dashboard, {{username}}</h2>
+  </div>
+</div>
 
-  <div class="container-fluid">
-    <div class="card mt-5">
-      <div class="card-body">
-        <h4 class="card-title">Create Blog</h4>
-        <form class="form new-blog-form">
-          <div class="form-group">
-            <input class="form-input" type="text" id="blog-title" name="blog-title" placeholder="Blog Title" />
-          </div>
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Create a New Blog:</h3>
 
-          <div class="form-group">
-            <textarea class="form-input" id="blog-desc" name="blog-desc" placeholder="Blog Content"></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Create</button>
-          </div>
-        </form>
+    <form class="form newBlogForm">
+      <div class="form-group">
+        <input class="form-input" type="text" id="blogTitle" name="blogTitle" placeholder="Blog Title" />
       </div>
 
-      {{#each blogs as |blog|}}
-      <div class="card m-2 mt-5" style="width: 16rem;">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a href="/dashboard/{{blog.id}}/edit">{{blog.title}}</a>
-          </h5>
-          <h6 class="card-subtitle mb-2">Created On: {{format_date blog.dateCreated}}</h6>
-        </div>
-        <button class="btn btn-primary mt-4" data-id="{{blog.id}}">Delete</button>
+      <div class="form-group">
+        <textarea class="form-input" id="blogDescription" name="blogDescription" placeholder="Blog Content"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if blogs.length}}
+  <div class="col-md-6 blogList">
+    <h3>Current Blogs:</h3>
+
+    {{#each blogs as |blog|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-danger" data-id="{{blog.id}}">Delete</button>
       </div>
     </div>
     {{/each}}
   </div>
+  {{/if}}
+</div>
 
-
-</section>
+<script src="/js/dashboard.js"></script>

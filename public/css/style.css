@@ -1,24 +1,172 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Lobster&display=swap');
+
+body {
+  background-image: url("../images/background.png");
+  background-size: 100%;
 }
 
-.no-button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: #1b89bc;
+.navTitle {
+  color: #2b3f57;
+  font-size: xx-large;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+}
+
+.navbar-toggler {
+  color: #2b3f57
+}
+
+.navbarLink {
+  font-size: 20px;
+  color: #2b3f57;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+}
+.blogBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  border: 4px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+
+.blogTitle {
   text-decoration: none;
-  font-size: 100%;
+  color: #f2f2f2;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 25px;
 }
 
-.no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+.blogDesc {
+  background-color: #f2f2f2;
 }
 
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
+.blogDescMain {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+}
+
+.blogDescTwo {
+  font-size: 25px;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  color: #f2f2f2;
+}
+
+.blogCreate {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  padding: 5px;
+  color: #f2f2f2;
+}
+
+.blogBoxCont {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: #2b3f57
+}
+
+.formCont {
+  margin-top: 10px;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.commentBox{
+  background-color: #4289a3;
+  border-radius: 10px;
+  border: 4px;
+  border-style: solid;
+}
+
+.commentButton {
+  background-color: #f2f2f2;
+  color: #4289a3;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+}
+
+.commentButton:hover {
+  background-color: #4289a3;
+  color: #f2f2f2;
+}
+
+.commentCont {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 90%;
+  background-color: #2b3f57;
+}
+
+.commentTextBox {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  color: #f2f2f2;
+}
+.commentOwner {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  color: #f2f2f2;
+}
+
+.btnComment {
+  margin-top: 10px;
+}
+
+.commentText {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  padding-top: 10px;
+  background-color: #f2f2f2;
+}
+
+.commentCont {
+  border-style: solid;
+}
+
+.headerRow {
+  background-color: #4289a3;
+}
+
+a:link {
+  color: #f2f2f2;
+}
+
+a:hover {
+  color: #2b3f57;
+}
+
+.login {
+  margin-left: 25px;
+}
+
+.signup {
+  margin-left: 25px;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.logoutLink {
+  position: fixed;
+  right: 0;
+  top: -2;
+  margin-right: 25px;
+  margin-top: 25px;
+  font-size: 20px;
+  color: #2b3f57;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
 }

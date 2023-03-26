@@ -45,13 +45,13 @@ const updateBlog = async (event) => {
   event.preventDefault();
   console.log("entered form");
   const id = event.target.getAttribute("data-id");
-  if (event.target.hasAttribute("data-id")) {
+  if (id) {
     const title = document.querySelector(`#blogTitle${id}`).value.trim();
-    const content = document.querySelector(`#blogDescription${id}`).value.trim();
-    if (title && content) {
+    const description = document.querySelector(`#blogDescription${id}`).value.trim();
+    if (title && description) {
       const response = await fetch(`/api/blog/${id}`, {
         method: "PUT",
-        body: JSON.stringify({ title, content }),
+        body: JSON.stringify({ title, description }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -60,14 +60,15 @@ const updateBlog = async (event) => {
       if (response.ok) {
         document.location.replace("/dashboard");
       } else {
-        alert("failed to update blog post!");
+        alert("This Blog Could Not Be Updated. Please Try Again");
       }
     }
   }
 };
 
+
 document.querySelector(".newBlogForm").addEventListener("submit", newBlog);
 
 document.querySelector(".blogList").addEventListener("click", deleteBlog);
 
-document.querySelector(".blogUpdate").addEventListener("submit", updateBlog);
+document.querySelector(".updateBlogForm").addEventListener("submit", updateBlog);

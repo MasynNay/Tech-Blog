@@ -100,9 +100,8 @@ h3 {
   border-style: solid;
   border-radius: 5px;
   background-color: #f2f2f2;
-  width: 80%;
-  margin-top: 10px;
-  
+  width: 10rem;
+  margin-top: 4px;
 }
 
 .blogCreate {
@@ -200,7 +199,7 @@ h3 {
   border: 2px;
   border-style: solid;
   border-color: #f2f2f2;
-  margin-top: 10px;
+  width: 8rem;
 }
 
 .dashboardHeader {
@@ -290,7 +289,7 @@ a:hover {
   border-style: solid;
   border-color: #f2f2f2;
   margin-top: 10px;
-  margin-right: 20px;
+  width: 10rem;
 }
 
 .signupLink {
@@ -318,5 +317,28 @@ a:hover {
   border-style: solid;
   border-color: #f2f2f2;
   margin-top: 10px;
-  margin-right: 20px;
+  width: 8rem;
+}
+
+.newBlogFormInput {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 10rem;
+  margin-top: 4px;
+}
+
+.newBlogFormInput {
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 20rem;
+  height: 4rem;
+  margin-top: 4px;
 }

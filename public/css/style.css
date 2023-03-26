@@ -230,7 +230,7 @@ a:hover {
   padding-bottom: 20px;
 }
 
-.signup {
+.signUp {
   padding-bottom: 20px;
 }
 
@@ -292,7 +292,7 @@ a:hover {
   width: 10rem;
 }
 
-.signupLink {
+.signUpLink {
   background-color: #2b3f57;
   color: #f2f2f2;
   text-decoration: none;
@@ -307,7 +307,7 @@ a:hover {
   margin-bottom: 10px;
 }
 
-.signupLink:hover {
+.signUpLink:hover {
   color: #f2f2f2;
   background: #0d6efd;
   border: 0px;

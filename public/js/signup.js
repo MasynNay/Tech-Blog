@@ -1,8 +1,8 @@
-const signupFormHandler = async (event) => {
+const signUpFormHandler = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector("#signupUsername").value.trim();
-  const password = document.querySelector("#signupPassword").value.trim();
+  const username = document.querySelector("#signUpUsername").value.trim();
+  const password = document.querySelector("#signUpPassword").value.trim();
 
   if (username && password) {
     const response = await fetch("/api/users", {
@@ -20,5 +20,5 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector(".signupSubmit")
-  .addEventListener("submit", signupFormHandler);
+  .querySelector(".signUpSubmit")
+  .addEventListener("submit", signUpFormHandler);

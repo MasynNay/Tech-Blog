@@ -11,7 +11,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-// Signup Page
+// signUp Page
 router.get("/signUp", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/dashboard");
@@ -102,7 +102,5 @@ router.get("/dashboard", withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;

@@ -1,5 +1,4 @@
 // Create New Comment
-
 const commentFormHandler = async function (event) {
   event.preventDefault();
 

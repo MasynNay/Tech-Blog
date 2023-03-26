@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: "I don't know what else to put here :)",
+  secret: "SECRET TUNNEL, SECRET TUNNEL THROUGH THE MOUNTAIN",
   cookie: {
     maxAge: 400000,
     httpOnly: true,

@@ -9,19 +9,19 @@
     <h3>Create a New Blog:</h3>
     <form class="form newBlogForm">
       <div class="form-group">
-        <input class="blogDescriptionForm form-input" type="text" id="blogTitle" name="blogTitle" placeholder="Blog Title" />
+        <input class="blogDescriptionForm form-input" type="text" id="blogTitle" name="blogTitle"
+          placeholder="Blog Title" />
       </div>
 
       <div class="form-group">
-        <textarea class="blogDescriptionForm form-input" id="blogDescription" name="blogDescription" placeholder="Blog Content"></textarea>
+        <input class="blogDescriptionForm form-input" id="blogDescription" name="blogDescription"
+          placeholder="Blog Content"></input>
       </div>
       <div class="form-group">
-        <button type="submit" class="deleteBlogBtn btn btn-primary">Create</button>
+        <button type="submit" data-id="{{blog.id}}" class="saveBlogBtn btn btn-primary">Create</button>
       </div>
     </form>
   </div>
-
-  {{#if blogs.length}}
   <div class="col-md-6 blogList">
     <h3>Your Active Blogs:</h3>
     {{#each blogs as |blog|}}
@@ -30,12 +30,27 @@
         <h4><a class="activeBlogLink" href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
       </div>
       <div class="col-md-4">
+        <button class="updateBlogBtn btn btn-primary" data-id="{{blog.id}}">Update</button> 
         <button class="deleteBlogBtn btn btn-danger" data-id="{{blog.id}}">Delete</button>
+        <div>
+          <form class="form newBlogForm">
+      <div class="form-group">
+        <input class="blogDescriptionForm form-input" type="text" id="blogTitle" name="blogTitle"
+          placeholder="Blog Title" />
+      </div>
+
+      <div class="form-group">
+        <input class="blogDescriptionForm form-input" id="blogDescription" name="blogDescription"
+          placeholder="Blog Content"></input>
+      </div>
+      </div>
+    </form>
+        </div>
       </div>
     </div>
-    {{/each}}
   </div>
-  {{/if}}
+  {{/each}}
+</div>
 </div>
 
 <script src="/js/dashboard.js"></script>

@@ -67,7 +67,7 @@ type "cd .." to return to the previous directory
 type "cd db" to enter the db folder
 type "mysql -u root -p" then enter your password
 type "source schema.sql"
-Then type "exit" to terminate mysql
+type "exit" to terminate mysql
 type "cd .." to return to the previous directory
 type "cd seeds" to enter the seeds folder
 type "node index.js" to seed the database

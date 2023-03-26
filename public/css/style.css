@@ -23,8 +23,9 @@ h3 {
   border-radius: 5px;
   text-align: center;
   margin-top: 10px;
-  margin-left: 10px;
-  width: 65%;
+  margin-left: 75px;
+  margin-bottom: 10px;
+  width: 55%;
 }
 
 .activeBlogLink {
@@ -279,6 +280,18 @@ a:hover {
   font-family: 'Kaushan Script', cursive;
   font-family: 'Lobster', cursive;
 }
+.saveBlogBtn {
+  background-color: #2b3f57;
+  color: #f2f2f2;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  border: 2px;
+  border-style: solid;
+  border-color: #f2f2f2;
+  margin-top: 10px;
+  margin-right: 20px;
+}
 
 .signupLink {
   background-color: #2b3f57;
@@ -293,4 +306,17 @@ a:hover {
   padding-left: 24px;
   padding-right: 24px;
   margin-bottom: 10px;
+}
+
+.updateBlogBtn {
+  background-color: #2b3f57;
+  color: #f2f2f2;
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lobster', cursive;
+  font-size: 16px;
+  border: 2px;
+  border-style: solid;
+  border-color: #f2f2f2;
+  margin-top: 10px;
+  margin-right: 20px;
 }

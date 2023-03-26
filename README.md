@@ -7,11 +7,11 @@ A blog where developers can publish their blog posts and comment on other develo
 
 ## Table of Contents
 
- * [User-Story](#user-story)
- * [Acceptance-Criteria](#acceptance-criteria)
+ * [User Story](#user-story)
+ * [Acceptance Criteria](#acceptance-criteria)
  * [Installation](#installation)
- * [Application-Demonstration](#application-demonstration)
- * [Video-Demonstration](#video-demonstration)
+ * [Application Demonstrations](#application-demonstrations)
+ * [Live Application](#Live-Application)
 
 ## User Story
 
@@ -75,11 +75,12 @@ type "cd .." to return to the previous directory
 type "npm start" to start the database
 ```
 
-## Application Demonstration
+## Application Demonstrations
 
-![](./assets/images/demo.png)
+![](./public/images/demo1.png)
+![](./public/images/demo2.png)
+![](./public/images/demo3.png)
 
 
-## Video Demonstration
+## Live Application
 
-https://drive.google.com/file/d/1AdzYY4MSyZjuhklN_SbxinZnTzoieWG-/view?usp=share_link

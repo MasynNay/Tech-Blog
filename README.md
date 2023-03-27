@@ -84,3 +84,4 @@ type "npm start" to start the database
 
 ## Live Application
 
+https://masyn-tech-blog.herokuapp.com

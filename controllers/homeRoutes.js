@@ -11,13 +11,13 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-// signUp Page
-router.get("/signUp", (req, res) => {
+// sign-up Page
+router.get("/sign-up", (req, res) => {
   if (req.session.logged_in) {
     res.redirect("/dashboard");
     return;
   }
-  res.render("signUp");
+  res.render("sign-up");
 });
 
 // Render Homepage
